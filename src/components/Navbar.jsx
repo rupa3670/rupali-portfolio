@@ -36,12 +36,16 @@ export default function Navbar() {
 
       <div className="flex items-center gap-3">
         <ThemeSwitch />
+      
+        <a href="/resume.pdf"
+          download>
         <Button
-          size="sm"
-          className="bg-purple-600 text-white hover:bg-purple-700 transition-colors"
-        >
-          download resume
-        </Button>
+            size="sm"
+            className="bg-purple-600 text-white hover:bg-purple-700 transition-colors cursor-pointer"
+          >
+            download resume
+          </Button>
+        </a>
       </div>
     </nav>
   );

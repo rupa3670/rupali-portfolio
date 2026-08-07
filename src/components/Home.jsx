@@ -13,8 +13,9 @@ export default function Home() {
       </h1>
       
       <h1 className="font-serif text-4xl md:text-5xl leading-tight text-gray-900 dark:text-gray-100">
-        Building modern websites with{" "}
-        <span className="text-purple-600 dark:text-purple-400">Frontend</span> Development
+       
+        Junior 
+        <span className="text-purple-600 dark:text-purple-400"> Frontend </span>Developer
       </h1>
 
       {/* Social links */}
