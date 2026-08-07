@@ -3,9 +3,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className=" dark:bg-neutral-950 flex flex-col md:flex-row items-center justify-between gap-10 px-8 py-20 max-w-6xl mx-auto"
+      className=" dark:bg-neutral-950 flex flex-col md:flex-row items-center justify-between gap-10 px-8 py-20 max-w-5xl mx-auto"
     >
-      {/* Left side - text */}
+     
       <div className="flex-1 space-y-4">
         <span className="text-purple-600 dark:text-purple-400 font-semibold tracking-wide uppercase text-sm">
           About Me
@@ -25,15 +25,16 @@ export default function About() {
           persistence to keep going.
         </p>
       </div>
-      {/* Right side - image */}
+     
       <div className="flex-1 flex justify-center">
-        <div className="relative w-70 h-90 md:w-85 md:h-100 overflow-hidden shadow-lg bg-white dark:bg-neutral-900 border-2 border-white dark:border-neutral-700 shadow-white dark:shadow-none dark:shadow-black/30">
-          <Image
-            src="/assest/rupali.png"
-            alt="Rupali Akter"
-            fill
-            className="object-cover"
-          />
+        <div className="relative w-70 h-90 md:w-85 md:h-100 overflow-hidden ">
+         <Image
+  src="/assest/rupali.png"
+  alt="Rupali"
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  priority
+/>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-8 py-4 bg-purple-50 dark:bg-neutral-900 shadow-sm shadow-gray-200 dark:shadow-none border-b border-gray-100 dark:border-neutral-800">
+    <nav className="flex items-center justify-between px-8 py-4 bg-purple-50 dark:bg-neutral-900 shadow-sm shadow-gray-200 dark:shadow-none border-b border-gray-100 dark:border-neutral-800 sticky top-0 z-50">
       <div className="flex items-center gap-3">
         <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-500 to-purple-800 flex items-center justify-center text-white font-bold shadow-md shadow-purple-200">
           R
