@@ -2,22 +2,19 @@ import { LogoGithub, LogoLinkedin } from "@gravity-ui/icons";
 import { Code2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-
 export default function Home() {
   return (
     <section
       id="home"
-      className=" dark:bg-neutral-950 min-h-[80vh] flex flex-col items-start justify-center px-8 py-15 max-w-5xl mx-auto"
+      className="dark:bg-neutral-950 min-h-[80vh] flex flex-col items-start justify-center px-8 py-15 max-w-5xl mx-auto"
     >
-      
-
       <h1 className="font-serif text-4xl md:text-5xl leading-tight text-gray-900 dark:text-gray-100">
         Hi, I'm Rupali Akter,
       </h1>
       
       <h1 className="font-serif text-4xl md:text-5xl leading-tight text-gray-900 dark:text-gray-100">
-        Learning to build with{" "}
-        <span className="text-blue-600">Full-Stack</span> Development
+        Building modern websites with{" "}
+        <span className="text-purple-600 dark:text-purple-400">Frontend</span> Development
       </h1>
 
       {/* Social links */}
@@ -52,14 +49,11 @@ export default function Home() {
         </Link>
       </div>
 
-      
       <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-6 max-w-2xl">
-        I am currently learning Frontend and Backend Development, working with
-        React and Next.js. I enjoy solving problems and slowly building my way
-        toward becoming a Full-Stack Developer.
+        I am skilled in Frontend Development using React, Next.js, and Tailwind CSS, alongside basic Backend knowledge. I enjoy solving problems and building clean, user-friendly websites.
       </p>
 
-      
+      {/* Action Buttons */}
       <div className="flex gap-4 mt-8">
         <a
           href="mailto:youremail@example.com"
@@ -68,7 +62,6 @@ export default function Home() {
           send hi
         </a>
         <a
-        
           href="/resume.pdf"
           download
           className="px-5 py-2.5 rounded-md bg-purple-600 text-white font-medium hover:bg-purple-700 transition"
