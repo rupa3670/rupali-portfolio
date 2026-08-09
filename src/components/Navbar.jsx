@@ -6,13 +6,13 @@ import { Menu, X } from "lucide-react";
 import ThemeSwitch from "./ThemeSwitch";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
   
-  { name: "Education", href: "#education" },
-  { name: "Skills", href: "#skills" },
-  { name: "Project", href: "#project" },
-  { name: "Contact", href: "#contact" },
+  { name: "Education", href: "/#education" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Project", href: "/#project" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
