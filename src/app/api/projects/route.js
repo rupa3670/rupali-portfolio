@@ -10,7 +10,6 @@ export async function GET() {
 
     const rawProjects = await db.collection("projects").find({}).toArray();
 
-    
     const projects = rawProjects.map((item) => ({
       ...item,
       id: item._id.toString(),
@@ -19,7 +18,6 @@ export async function GET() {
 
     return NextResponse.json(projects);
   } catch (error) {
-    
     console.error("--- MONGODB ERROR ---", error);
     return NextResponse.json(
       { error: error.message || "Failed to fetch projects" },

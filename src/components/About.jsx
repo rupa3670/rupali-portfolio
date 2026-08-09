@@ -1,41 +1,38 @@
-import Image from "next/image";
 export default function About() {
   return (
     <section
       id="about"
-      className=" dark:bg-neutral-950 flex flex-col md:flex-row items-center justify-between gap-10 px-8 py-20 max-w-5xl mx-auto"
+      className="dark:bg-neutral-950 px-8 py-20 max-w-3xl mx-auto"
     >
-     
-      <div className="flex-1 space-y-4">
+      <div className="space-y-4">
         <span className="text-purple-600 dark:text-purple-400 font-semibold tracking-wide uppercase text-sm">
           About Me
         </span>
-        <h2 className="text-xl md:text-xl font-bold text-gray-800 dark:text-gray-100">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">
           Hi, I am Rupali Akter
         </h2>
+
         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I am a 3rd year CSE student, currently learning both Frontend and
-          Backend Development. I enjoy working with React and Next.js, and
-          I am steadily moving toward becoming a Full-Stack Developer.
+          I am a 3rd year CSE student on my way to becoming a Full-Stack
+          Developer. Right now, my strongest skill is Frontend Development
+          — I work confidently with React, Next.js, and Tailwind CSS to
+          build clean, responsive interfaces. Alongside that, I am also
+          building my Backend skills with Node.js, Express.js, MongoDB,
+          and SQL.
         </p>
+
         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I love learning new technologies and building small real-world
-          projects with them. I may still be new when it comes to
-          experience, but I bring a strong eagerness to learn and the
-          persistence to keep going.
+          My journey started with C/C++, and I have solved quite a few
+          problems on Codeforces and LeetCode along the way — it sharpened
+          my logic and problem-solving, skills I still carry into every
+          project I build.
         </p>
-      </div>
-     
-      <div className="flex-1 flex justify-center">
-        <div className="relative w-70 h-90 md:w-85 md:h-100 overflow-hidden ">
-         <Image
-  src="/assest/rupali.png"
-  alt="Rupali"
-  fill
-  sizes="(max-width: 768px) 100vw, 50vw"
-  priority
-/>
-        </div>
+
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Outside of coding, I enjoy reading and exploring new things. I
+          believe in staying consistent and always learning, and I try to
+          bring that mindset into everything I do.
+        </p>
       </div>
     </section>
   );

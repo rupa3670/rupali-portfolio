@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Chip, Card, Spinner } from "@heroui/react";
+import { LogoGithub } from "@gravity-ui/icons";
 
 export default function ProjectsSection() {
   const [projects, setProjects] = useState([]);
@@ -43,9 +44,10 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section 
-    id="project"
-    className="relative min-h-screen py-20 px-6 max-w-6xl mx-auto bg-purple-50 dark:bg-zinc-950 text-zinc-900 dark:text-purple-100 transition-colors duration-300">
+    <section
+      id="project"
+      className="relative min-h-screen py-20 px-6 max-w-6xl mx-auto bg-purple-50 dark:bg-zinc-950 text-zinc-900 dark:text-purple-100 transition-colors duration-300"
+    >
       {/* Header Bar */}
       <div className="flex justify-between items-end mb-16 border-b border-purple-200 dark:border-purple-900/50 pb-4">
         <div>
@@ -74,10 +76,8 @@ export default function ProjectsSection() {
               className="group relative border-b border-purple-200/70 dark:border-purple-900/40 py-10 transition-colors duration-300 hover:border-purple-500 dark:hover:border-purple-400"
             >
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                
                 {/* Left Side: Title, Description, Skills */}
                 <div className="space-y-4 max-w-xl">
-                  {/* Word-by-Word Purple & Wave Effect */}
                   <h3 className="text-3xl md:text-5xl font-serif text-zinc-900 dark:text-zinc-100 flex flex-wrap gap-x-3 gap-y-1">
                     {project.title.split(" ").map((word, wordIdx) => (
                       <span
@@ -89,12 +89,10 @@ export default function ProjectsSection() {
                     ))}
                   </h3>
 
-                  {/* Dark Mode Readable Description */}
                   <p className="text-sm text-zinc-600 dark:text-purple-200/70 leading-relaxed font-sans">
                     {project.description}
                   </p>
 
-                  {/* Purple Badges for Skills */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {(project.tags || []).map((tag, idx) => (
                       <Chip
@@ -107,13 +105,44 @@ export default function ProjectsSection() {
                       </Chip>
                     ))}
                   </div>
+
+                  {/* Mobile: Image always visible below description */}
+                  {project.image && (
+                    <div className="sm:hidden relative w-full h-[200px] rounded-xl overflow-hidden border border-purple-300 dark:border-purple-800/60 mt-4">
+                      <Image
+                        src={project.image}
+                        alt={project.title || "Project Preview"}
+                        fill
+                        sizes="100vw"
+                        className="object-cover"
+                        unoptimized
+                      />
+                    </div>
+                  )}
+
+                  {/* Mobile: Action links always visible */}
+                  <div className="flex sm:hidden items-center gap-6 pt-2">
+                    <Link
+                      href={project.githubUrl || "#"}
+                      target="_blank"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-purple-700 dark:text-purple-300"
+                    >
+                      <LogoGithub className="w-4 h-4" />
+                      <span>Github</span>
+                    </Link>
+                    <Link
+                      href={`/projects/${projectId}`}
+                      className="inline-flex items-center gap-1 text-sm font-medium text-purple-700 dark:text-purple-300"
+                    >
+                      <span>Detail</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
 
-                
-                <div className="flex items-center gap-6 self-start lg:self-center">
-                  
-                
-                  <div className="w-[340px] h-[220px] hidden sm:block relative">
+                {/* Right Side: Desktop hover image + links */}
+                <div className="hidden sm:flex items-center gap-6 self-start lg:self-center">
+                  <div className="w-[340px] h-[220px] relative">
                     <AnimatePresence mode="wait">
                       {isHovered && project.image && (
                         <motion.div
@@ -140,16 +169,16 @@ export default function ProjectsSection() {
                     </AnimatePresence>
                   </div>
 
-                  {/* Detail Link */}
+                 
+
+                  {/* Detail Link -> goes to dedicated detail page */}
                   <Link
-                    href={project.liveUrl || "#"}
-                    target="_blank"
+                    href={`/projects/${projectId}`}
                     className="inline-flex items-center gap-1 text-sm font-medium text-purple-700 dark:text-purple-300 opacity-0 group-hover:opacity-100 transition-all duration-200 hover:text-purple-900 dark:hover:text-purple-100 whitespace-nowrap"
                   >
                     <span>Detail</span>
                     <ArrowUpRight className="w-4 h-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
-
                 </div>
               </div>
             </motion.div>
