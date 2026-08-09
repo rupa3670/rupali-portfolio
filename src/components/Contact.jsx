@@ -6,7 +6,7 @@ import { LogoGithub, LogoLinkedin } from "@gravity-ui/icons";
 import { Code2, Send, Mail, Phone, CheckCircle2 } from "lucide-react";
 
 // TODO: replace with your own Formspree endpoint from https://formspree.io
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xxxxxxxx";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xrpzewkw";
 
 export default function Contacts() {
   const [formData, setFormData] = useState({
@@ -23,7 +23,10 @@ export default function Contacts() {
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
-        headers: { Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
       });
 

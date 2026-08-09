@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@heroui/react";
 import { Menu, X } from "lucide-react";
 import ThemeSwitch from "./ThemeSwitch";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", href: "/#home" },
@@ -26,14 +27,14 @@ export default function Navbar() {
     <nav className="bg-purple-50 dark:bg-neutral-900 shadow-sm shadow-gray-200 dark:shadow-none border-b border-gray-100 dark:border-neutral-800 sticky top-0 z-50">
       <div className="flex items-center justify-between px-8 py-4">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+        <Link href="/#home" className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-500 to-purple-800 flex items-center justify-center text-white font-bold shadow-md shadow-purple-200">
             R
           </div>
           <span className="font-bold text-lg text-gray-800 dark:text-gray-100">
             Rupali
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8">
