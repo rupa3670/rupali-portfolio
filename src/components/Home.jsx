@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
 
         <h1 className="font-serif text-4xl md:text-5xl leading-tight text-gray-900 dark:text-gray-100 mt-1">
-          Junior <span className="text-purple-600 dark:text-purple-400">Frontend</span> Developer
+          Junior <span className="text-purple-600 dark:text-purple-400">Full-Stack</span> Developer
         </h1>
 
         {/* Social links */}
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
 
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-6 max-w-xl">
-          I am skilled in Frontend Development using React, Next.js, and Tailwind CSS, alongside basic Backend knowledge. I enjoy solving problems and building clean, user-friendly websites.
+          I am a Junior Full-Stack Developer skilled in React, Next.js, and Tailwind CSS on the frontend, along with Node.js, Express.js, and MongoDB on the backend. I enjoy solving real-world problems and building clean, scalable, user-friendly web applications from end to end.
         </p>
 
         {/* Action Buttons */}
@@ -68,7 +68,7 @@ export default function Home() {
             Send Hi
           </a>
           <a
-            href="/resume.pdf"
+            href="/Rupali_Akter_Resume .pdf"
             download
             className="px-5 py-2.5 rounded-md bg-purple-600 text-white font-medium hover:bg-purple-700 transition"
           >

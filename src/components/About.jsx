@@ -12,13 +12,12 @@ export default function About() {
           Hi, I am Rupali Akter
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I am a 3rd year CSE student on my way to becoming a Full-Stack
-          Developer. Right now, my strongest skill is Frontend Development
-          — I work confidently with React, Next.js, and Tailwind CSS to
-          build clean, responsive interfaces. Alongside that, I am also
-          building my Backend skills with Node.js, Express.js, MongoDB,
-          and SQL.
+       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          I am a 3rd year CSE student and Junior Full-Stack Developer. I
+          work confidently with React, Next.js, and Tailwind CSS to build
+          clean, responsive interfaces, and I bring those ideas to life
+          end-to-end with Node.js, Express.js, MongoDB, and SQL on the
+          backend.
         </p>
 
         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
