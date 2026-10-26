@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeSwitch />
 
-          <a href="/Rupali_Akter_Resume .pdf" download className="hidden sm:block">
+          <a href="/Rupali_Akter_FullStack_Resume_JuniorFullStack.pdf" download className="hidden sm:block">
             <Button
               size="sm"
               className="bg-purple-600 text-white hover:bg-purple-700 transition-colors cursor-pointer"

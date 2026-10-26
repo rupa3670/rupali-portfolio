@@ -68,7 +68,7 @@ export default function Home() {
             Send Hi
           </a>
           <a
-            href="/Rupali_Akter_Resume .pdf"
+            href="/Rupali_Akter_FullStack_Resume_JuniorFullStack.pdf"
             download
             className="px-5 py-2.5 rounded-md bg-purple-600 text-white font-medium hover:bg-purple-700 transition"
           >
