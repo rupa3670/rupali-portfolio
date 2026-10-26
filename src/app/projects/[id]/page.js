@@ -76,7 +76,7 @@ export default async function ProjectDetailPage({ params }) {
             {/* Links */}
             <div className="flex flex-wrap gap-3 mb-8">
               <a
-                href={project.liveUrl?.trim() || "#"}
+                href={project.liveLink?.trim() || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-700 transition-colors text-sm shadow-sm"
@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({ params }) {
               </a>
 
               <a
-                href={project.githubUrl || "#"}
+                href={project.githubLink || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-50 dark:bg-neutral-800 text-purple-700 dark:text-gray-200 font-medium hover:bg-purple-100 dark:hover:bg-neutral-700 transition-colors text-sm"
@@ -106,12 +106,12 @@ export default async function ProjectDetailPage({ params }) {
               <InfoBlock
                 icon={AlertTriangle}
                 title="Challenges Faced"
-                text={project.challenges || "Details coming soon."}
+                text={project.challenge || "Details coming soon."}
               />
               <InfoBlock
                 icon={Rocket}
                 title="Future Improvements"
-                text={project.futureImprovements || "Details coming soon."}
+                text={project.futurePlans || "Details coming soon."}
               />
             </div>
           </div>
